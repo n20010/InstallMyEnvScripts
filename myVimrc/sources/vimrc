@@ -1,3 +1,68 @@
+" vi左側に番号を表示
 set number
 
+" 新規.shファイルはテンプレートを読み込む
 autocmd BufNewFile *.sh 0r ~/Templates/forPG/shellScript.sh
+
+
+"----------------------------------------
+" 検索
+"----------------------------------------
+
+"検索の際に大文字小文字を区別しない
+set ignorecase
+
+" 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
+set wrapscan
+
+" 検索結果をハイライト表示
+set hlsearch
+
+
+"----------------------------------------
+" 表示設定
+"----------------------------------------
+" エラーメッセージの表示時にビープを鳴らさない
+set noerrorbells
+
+" 対応する括弧やブレースを表示
+set shellslash
+
+" ウィンドウの右下にまだ実行していない入力中のコマンドを表示
+set showcmd
+
+" 行末のスペースを可視化
+set listchars=tab:^\ ,trail:~
+
+" コメントの色を水色
+hi Comment ctermfg=3
+
+" インデント幅
+set shiftwidth=2
+
+" yでコピーした時にクリップボードに入る
+set guioptions+=a
+
+" 対応する括弧を強調表示
+set showmatch
+
+" タイトルを表示
+set title
+
+" ヤンクでクリップボードにコピー
+set clipboard=unnamed,autoselect
+
+" auto reload .vimrc
+augroup source-vimrc
+  autocmd!
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
+  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+augroup END
+
+" 補完候補を表示
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap " . k . " " . k . "<C-N><C-P>"
+endfor
+
+imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
