@@ -1,0 +1,3 @@
+set number
+
+autocmd BufNewFile *.sh 0r ~/Templates/shellScript.sh
