@@ -1,4 +1,4 @@
 The repository for create my enviroment.
 
----suported---
+---supported---
 - vimrc(config, Templates)
