@@ -11,7 +11,7 @@ fi
 cp sources/vimrc $_VIMRC
 
 if [ ! -d $_TEMPLATE ]; then
-    mkdir $_TEMPLATE
+    mkdir -p $_TEMPLATE
 fi
 
-cp --force sources/templates/* $_TEMPLATE
+cp -a  --force sources/templates/* $_TEMPLATE
