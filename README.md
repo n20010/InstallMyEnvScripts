@@ -1,13 +1,13 @@
-#The repository for create my UbuntuPC enviroment.
+# The repository for create my UbuntuPC enviroment.
 
 
-##---supported---
+## ---supported---
 - Vimrc(config, Templates)
 - Create my vagrantEnv function
 - .bash_profile(some functions)
 
 
-##---Functions---
+## ---Functions---
 
 - Vagrant
   - vsetup() 
