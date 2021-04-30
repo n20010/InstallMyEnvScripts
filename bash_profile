@@ -95,3 +95,20 @@ vsetup() {
   echo "You should use 'vagrant up' command if you want to use Virtual Instanse."
   echo "-------------------------------------------------------------"
 }
+
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------
+
+dive() {
+
+#カレントディレクトリにVagrantfileがあれば仮想マシンを起動&SSH接続
+#if current dir has Vagrantfile, start a virtual machine and ssh conection to it.
+  vagrant up 2>/dev/null
+  if [ $? -gt 0 ]; then
+    echo 'Vagrantfile is not found.'
+    return 1
+  fi
+
+  vagrant ssh
+}
