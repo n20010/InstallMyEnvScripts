@@ -74,7 +74,7 @@ vsetup() {
   echo ''
   echo '-----Notification-----'
   while true; do
-    echo '- Create a private network?[y/n]'
+    echo 'Create a private network?[y/n]'
     read input
     case $input in 
       [Yy]) 
@@ -105,10 +105,11 @@ dive() {
 #カレントディレクトリにVagrantfileがあれば仮想マシンを起動&SSH接続
 #if current dir has Vagrantfile, start a virtual machine and ssh conection to it.
   vagrant up 2>/dev/null
-  if [ $? -gt 0 ]; then
+  if [ $? -eq 0 ]; then
+    vagrant ssh 
+  else
     echo 'Vagrantfile is not found.'
     return 1
   fi
 
-  vagrant ssh
 }
