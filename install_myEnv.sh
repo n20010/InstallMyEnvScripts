@@ -1,6 +1,6 @@
 #!bin/bash
 
-sudo apt update
+sudo apt update -y
 
 source ./vimrc/myVimrc.sh
 source ./vagrant/myVagrantEnv.sh
