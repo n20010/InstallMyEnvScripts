@@ -6,6 +6,7 @@
 - Create my vagrantEnv function
 - .bash_profile(some functions)
 - .bash_aliases(some aliases)
+- Add my name & email for git features 
 
 
 ## ---Functions---
