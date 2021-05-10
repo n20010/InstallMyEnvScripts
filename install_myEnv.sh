@@ -21,6 +21,8 @@ cp bash_aliases $_BASH_A
 git config --global user.name "Koki Satani"
 git config --global user.email "n20010@std.it-college.ac.jp"
 
+source ./neovim/install_neovim.sh
+
 
 echo '----------------------------------------------------------------------'
 echo '----------------------------------------------------------------------'
