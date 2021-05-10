@@ -5,6 +5,7 @@
 - Vimrc(config, Templates)
 - Create my vagrantEnv function
 - .bash_profile(some functions)
+- .bash_aliases(some aliases)
 
 
 ## ---Functions---
@@ -12,4 +13,8 @@
 - Vagrant
   - vsetup() 
   - dive()
+
+## ---Aliases---
+- sbash(source ~/.bash_aliases)
+- update(sudo apt update &upgrade)
 
