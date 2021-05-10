@@ -18,6 +18,9 @@ if [ ! -e $_BASH_A ]; then
 fi
 cp bash_aliases $_BASH_A
 
+git config --global user.name "Koki Satani"
+git config --global user.email "n20010@std.it-college.ac.jp"
+
 
 echo '----------------------------------------------------------------------'
 echo '----------------------------------------------------------------------'
