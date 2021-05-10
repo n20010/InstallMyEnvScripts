@@ -1,5 +1,7 @@
 #!bin/bash
 
+sudo apt update
+
 source ./vimrc/myVimrc.sh
 source ./vagrant/myVagrantEnv.sh
 
@@ -8,10 +10,14 @@ _BASH_P="$HOME/.bash_profile"
 if [ ! -e $_BASH_P ]; then
     touch $_BASH_P
 fi
-
 cp bash_profile $_BASH_P
 
-source $_BASH_P
+_BASH_A="$HOME/.bash_aliases"
+if [ ! -e $_BASH_A ]; then
+    touch $_BASH_A
+fi
+cp bash_aliases $_BASH_A
+
 
 echo '----------------------------------------------------------------------'
 echo '----------------------------------------------------------------------'

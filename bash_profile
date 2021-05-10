@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# user settings
+set -o vi
+export EDITOR=nvim
+
+# nvim settings
+export PATH=$PATH:$HOME/.local/bin
+
+# --- functions ----
 vsetup() {
 
 #Vagrantfileがすでに存在する場合は関数を終了
@@ -113,3 +121,4 @@ dive() {
   fi
 
 }
+
