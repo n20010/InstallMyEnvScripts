@@ -18,4 +18,5 @@
 ## ---Aliases---
 - sbash(source ~/.bash_aliases)
 - update(sudo apt update &upgrade)
+- aws(ssh aws server)
 
