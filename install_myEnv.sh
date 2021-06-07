@@ -21,6 +21,10 @@ cp bash_aliases $_BASH_A
 git config --global user.name "Koki Satani"
 git config --global user.email "n20010@std.it-college.ac.jp"
 
+#Gitがパスワードを一日保持する設定
+#Git to keep your password for a day
+git config --global credential.helper "cache --timeout=86400"
+
 source ./neovim/install_neovim.sh
 
 
